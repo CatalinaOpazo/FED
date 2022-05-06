@@ -1,0 +1,70 @@
+#include<iostream>
+#include<stack>
+#include<strings>
+#include<map>
+using namespace std;
+
+
+//Ejercicio (1991) Battle near the swamp 
+//Input La primera linea contiene los numeros n (bloques) y k (cantidad de drioides por bloques)
+//La segunda linea tiene cuantas bombas se usan para matar los droides.
+//Hay que entregar la las bombas que sobran y las que faltan.
+
+/*int main(){
+	//Primero hay que leer la entrada
+	int n,k, bombas=0,droides=0;
+	int aux;
+	cin>> n >>k;
+
+	for(i=0,i<n;i++){
+		
+		cin>>aux; //Lee los datos 
+
+		int resta=k-aux;
+		if (suma < 0){
+			bombas+= -1*suma; //pq la suma es negativa
+		}
+		else droides +=suma;
+
+	}
+
+	cout << bombas << " " << droides << endl;
+}
+
+*/
+
+
+
+
+
+
+//Ejercicio 1220. Stacks
+//el input es en la primera linea es n (la cantidad de instrucciones)
+//Despues viene instruccion nombre stack y lo que entra (para push) y instrucicon nombre stack (para pop)
+
+
+//Una idea podria ser usar un vector de stacks y guardando segun la id, PERO las id no tienen por que llegar ordenadas.
+
+int main(){
+
+	int n;
+	string operacion, string id, string valor;
+	map<int,stack<int>> m;
+	cin >> n;
+
+	for(i=0;1<n;i++){
+
+		cin>>operacion; //primero lee solo la operacion
+		if(operacion == "PUSH"){
+			cin>> id >> valor;
+			int id_ = stoi(id);
+			int valor_ = stoi(valor);
+			m[id].push(valor_);
+		}
+		else{
+			cin >> id;   
+		}
+	}
+
+
+}
